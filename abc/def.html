@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul,li {
+				list-style-type: none;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #ccc;
+			}			
+			
+			#menu {
+				
+				height: 40px;
+				background: #000;
+			}
+			
+			/*一级菜单*/
+			#menu ul li {
+				float: left;
+				line-height: 40px;
+				position: relative;
+			}
+			
+			#menu ul li:hover > ul {
+				display: block;
+			}
+			
+			#menu ul li a {
+				display: block;
+				width: 120px;
+				text-align: center;
+			}
+			
+			/*二级菜单*/
+			#menu ul li ul {
+				background: #000000;
+				display: none;
+			}
+			
+			#menu ul li ul li {
+				float: none;
+				border-bottom:1px solid #ccc ;
+			}
+			
+			/*三级菜单*/
+			#menu ul li ul li ul {
+				position: absolute;
+				left: 120px;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--导航菜单开始-->
+		<div id="menu">
+			<!--一级菜单开始-->
+			<ul>
+				<li><a href="">首页</a></li>
+				<li>
+					<a href="">师资介绍&#10132;</a>
+					<!--二级菜单开始-->
+					<ul>
+						<li>
+							<a href="">技术讲师&#10132;</a>
+							<!--三级菜单开始-->
+							<ul>
+								<li><a href="">java讲师</a></li>
+								<li><a href="">ui讲师</a></li>
+								<li><a href="">ios讲师</a></li>
+							</ul>
+							<!--三级菜单结束-->
+						</li>
+						<li><a href="">日语讲师</a></li>
+					</ul>
+					<!--二级菜单结束-->
+				</li>
+				<li><a href="">学习中心</a></li>
+				<li><a href="">就业指导</a></li>
+				<li><a href="">关于我们</a></li>
+			</ul>
+			<!--一级菜单结束-->
+		</div>
+		<!--导航菜单结束-->
+	</body>
+</html>
